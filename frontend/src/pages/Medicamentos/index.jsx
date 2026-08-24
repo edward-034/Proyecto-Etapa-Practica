@@ -130,7 +130,7 @@ export default function MedicamentosPage() {
                                 <th scope="col" className="px-6 py-4">Nombre Genérico</th>
                                 <th scope="col" className="px-6 py-4 text-center">Stock Actual</th>
                                 <th scope="col" className="px-6 py-4 text-right">Precio Venta</th>
-                                <th scope="col" className="relative px-6 py-4"><span className="sr-only">Acciones</span></th>
+                                <th scope="col" className="px-6 py-4 text-center">Acciones</th>
                             </tr>
                         </thead>
                         <tbody className="divide-y divide-gray-200 bg-white dark:divide-gray-800 dark:bg-gray-950">
@@ -164,12 +164,18 @@ export default function MedicamentosPage() {
                                         <td className="whitespace-nowrap px-6 py-4 text-right font-mono font-medium text-gray-900 dark:text-white">
                                             ${Number(item.precio_venta).toLocaleString('es-CO', { minimumFractionDigits: 2 })}
                                         </td>
-                                        <td className="whitespace-nowrap px-6 py-4 text-right text-sm font-medium">
+                                        <td className="whitespace-nowrap px-2 py-4 text-center text-sm font-medium space-x-2">
                                             <button 
                                                 onClick={() => { setEditing(item); setOpen(true); }}
                                                 className="rounded-lg border border-gray-300 bg-white px-3 py-1.5 text-xs font-semibold text-gray-700 shadow-sm transition-all hover:bg-gray-50 hover:text-blue-600 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-300 dark:hover:bg-gray-800 dark:hover:text-blue-400"
                                             >
                                                 Editar
+                                            </button>
+                                            <button 
+                                                onClick={() => remove(item.id_medicamento)}
+                                                className="rounded-lg border border-gray-300 bg-white px-3 py-1.5 text-xs font-semibold text-gray-700 shadow-sm transition-all hover:bg-gray-50 hover:text-red-600 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-300 dark:hover:bg-gray-800 dark:hover:text-red-400"
+                                            >
+                                                Eliminar
                                             </button>
                                         </td>
                                     </tr>
