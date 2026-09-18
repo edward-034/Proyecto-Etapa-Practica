@@ -1,6 +1,7 @@
 import { createBrowserRouter } from "react-router-dom";
 import Login from "../pages/Login";
 import Dashboard from "../pages/Dashboard";
+import Proveedores from "../pages/Proveedores";
 import Medicamentos from "../pages/Medicamentos";
 import Movimientos from "../pages/Movimientos"
 import Alertas from "../pages/Alertas";
@@ -19,6 +20,10 @@ export const router = createBrowserRouter([
     {
         path: "/dashboard",
         element:<ProtectedRoute><Dashboard /></ProtectedRoute>
+    },
+    {
+        path: "/proveedores",
+        element: <ProtectedRoute><Proveedores /></ProtectedRoute>
     },
     {
         path: "/medicamentos",

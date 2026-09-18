@@ -24,6 +24,20 @@ export default function Sidebar() {
                 <NavLink to="/dashboard" className={({ isActive }) => `px-3 py-2 rounded transition-all ${isActive ? "bg-blue-600 text-white" : "hover:bg-gray-200 dark:hover:bg-gray-700"}`}>
                     Dashboard
                 </NavLink>
+                {hasRole(["Administrador", "Supervisor", "Farmaceutico"]) && (
+                    <NavLink
+                        to="/proveedores"
+                        className={({ isActive }) =>
+                            `px-3 py-2 rounded transition-all ${
+                                isActive
+                                    ? "bg-blue-600 text-white"
+                                    : "hover:bg-gray-200 dark:hover:bg-gray-700"
+                            }`
+                        }
+                    >
+                        Proveedores
+                    </NavLink>
+                )}
                 <NavLink to="/medicamentos" className={({ isActive }) => `px-3 py-2 rounded transition-all ${isActive ? "bg-blue-600 text-white" : "hover:bg-gray-200 dark:hover:bg-gray-700"}`}>
                     Medicamentos
                 </NavLink>

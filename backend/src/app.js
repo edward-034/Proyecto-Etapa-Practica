@@ -10,6 +10,7 @@ const private= require("./modules/auth/auth.private")
 const medicamentos= require("./modules/medicamentos/medicamentos.routes")
 const movimientos= require("./modules/movimientos/movimientos.routes")
 const dashboard= require("./modules/dashboard/dashboard.routes")
+const proveedores = require("./modules/proveedores/proveedores.routes");
 const alertas= require("./modules/alertas/alertas.routes")
 const reportes= require("./modules/reportes/reportes.routes")
 const usuarios= require("./modules/usuarios/usuarios.routes")
@@ -29,6 +30,7 @@ app.use("/api/auth",auth);
 app.use("/api",private);
 app.use("/api/medicamentos",medicamentos);
 app.use("/api/movimientos",movimientos);
+app.use("/api/proveedores",proveedores);
 app.use("/api/dashboard",dashboard);
 app.use("/api/alertas",alertas);
 app.use("/api/reportes",reportes);
