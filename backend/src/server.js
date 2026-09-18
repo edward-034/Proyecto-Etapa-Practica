@@ -16,7 +16,7 @@ async function start(){
         })
     }
     catch(error){
-        console.log(error)
+        console.log(error, "Base de datos no conectada")
     }
 }
 
